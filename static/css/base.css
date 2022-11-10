@@ -341,3 +341,7 @@ input[name='q']::placeholder {
 .pink-background {
     background-color: rgba(235, 0, 140, 0.86);
 }
+
+.white-overlay-background {
+    background-color: rgb(255, 255, 255, 0.5);
+}

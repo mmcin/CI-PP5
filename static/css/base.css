@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('../../media/hero-image.jpg') no-repeat center center fixed;
+    background: url('/media/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -82,7 +82,7 @@ body {
     position: fixed;
     background: white;
     z-index: -1;
-    margin-top: 164px;
+    margin-top: 220px;
 }
 
 a.category-badge>span.badge:hover {

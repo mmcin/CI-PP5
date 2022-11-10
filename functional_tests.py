@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import unittest
+from django.contrib.auth.models import User
+from django.test import TestCase
 
 class AuthenticationTest(unittest.TestCase):
 
@@ -17,3 +19,4 @@ class AuthenticationTest(unittest.TestCase):
 
     if __name__ == '__main__':
         unittest.main(warnings='ignore')
+

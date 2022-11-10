@@ -1,10 +1,19 @@
-"""
-Need to add site title to assert
-"""
-
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+import unittest
 
-browser = webdriver.Chrome()
-browser.get('http://localhost:8000')
+class AuthenticationTest(unittest.TestCase):
 
-assert '' in browser.title
+    def setUp(self):
+        self.browser = webdriver.Chrome()
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_open_a_log_in_page(self):
+        self.browser.get('http://localhost:8000/accounts/login')
+        self.assertIn('Executive Whitening - Login', self.browser.title)
+
+    if __name__ == '__main__':
+        unittest.main(warnings='ignore')

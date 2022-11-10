@@ -332,3 +332,8 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+#nav-logo {
+    width: 70%;
+    padding: 10px;
+}

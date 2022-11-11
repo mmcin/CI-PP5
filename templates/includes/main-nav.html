@@ -14,38 +14,40 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_kits-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Whitening Kits
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">LED Kits</a>
-                <a href="" class="dropdown-item">Wireless LED Kits</a>
+            <div class="dropdown-menu border-0" aria-labelledby="whitening_kits-link">
+                <a href="{% url 'products' %}?category=wireless_led_kits" class="dropdown-item">Wireless LED Kits</a>
+                <a href="{% url 'products' %}?category=led_kits" class="dropdown-item">Wired LED Kits</a>
+                <a href="{% url 'products' %}?category=led_kits,wireless_led_kits" class="dropdown-item">All Whitening
+                    Kits</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="whitening_accessories-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Whitening Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Pastes</a>
-                <a href="" class="dropdown-item">Powders</a>
-                <a href="" class="dropdown-item">Floss</a>
-                <a href="" class="dropdown-item">Strips</a>
+            <div class="dropdown-menu border-0" aria-labelledby="whitening-kits-link">
+                <a href="{% url 'products' %}?category=pastes" class="dropdown-item">Pastes</a>
+                <a href="{% url 'products' %}?category=powders" class="dropdown-item">Powders</a>
+                <a href="{% url 'products' %}?category=floss" class="dropdown-item">Floss</a>
+                <a href="{% url 'products' %}?category=strips" class="dropdown-item">Strips</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="refills-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Refills
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Serum</a>
-                <a href="" class="dropdown-item">Strips</a>
-                <a href="" class="dropdown-item">All Refills</a>
+            <div class="dropdown-menu border-0" aria-labelledby="refills-link">
+                <a href="{% url 'products' %}?category=serum" class="dropdown-item">Serum</a>
+                <a href="{% url 'products' %}?category=strips" class="dropdown-item">Strips</a>
+                <a href="{% url 'products' %}?category=serum,strips" class="dropdown-item">All Refills</a>
             </div>
         </li>
     </ul>

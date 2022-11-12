@@ -40,6 +40,7 @@
 
     // Increment quantity
     $('.increment-qty').click(function (e) {
+        console.log('Increment');
         e.preventDefault();
         var itemId = $(this).data('item_id');
         var size = $(this).data('size');
@@ -56,6 +57,7 @@
 
     // Decrement quantity
     $('.decrement-qty').click(function (e) {
+        console.log('Decrement');
         e.preventDefault();
         var itemId = $(this).data('item_id');
         var size = $(this).data('size');

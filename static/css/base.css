@@ -340,11 +340,12 @@ input[name='q']::placeholder {
 }
 
 .pink-background {
-    background-color: rgba(235, 0, 140, 0.86);
+    background-color: #17a2b8;
+
 }
 
 .white-overlay-background {
-    background-color: rgb(255, 255, 255, 0.2);
+    background-color: rgb(255, 255, 255, 0.4);
     border-radius: 15%;
     font-family: "Lato", sans-serif;
     color: #222;
@@ -356,4 +357,8 @@ input[name='q']::placeholder {
 
 .margin-fix {
     margin-top: 100px;
+}
+
+#hero-header {
+    margin-top: 20px;
 }

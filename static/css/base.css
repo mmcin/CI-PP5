@@ -350,3 +350,7 @@ input[name='q']::placeholder {
 .allauth-margin-top {
     margin-top: 200px;
 }
+
+.margin-fix {
+    margin-top: 100px;
+}

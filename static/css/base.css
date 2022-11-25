@@ -344,7 +344,10 @@ input[name='q']::placeholder {
 }
 
 .white-overlay-background {
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 15%;
+    font-family: "Lato", sans-serif;
+    color: #222;
 }
 
 .allauth-margin-top {

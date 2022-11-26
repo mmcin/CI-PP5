@@ -1,5 +1,5 @@
 {% load static %}
-{% load media %}
+
 
 <!doctype html>
 <html lang="en">
@@ -56,7 +56,7 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}">
                         <!-- <h2 class="logo-font text-black my-0"><strong>XY</strong> Exclusive Whitening</h2> -->
-                        <img id="nav-logo" src="{% media 'xylogo.png' %}" alt="The Exclusive Whitening company logo">
+                        <img id="nav-logo" src="{{ MEDIA_URL }}xylogo.png" alt="The Exclusive Whitening company logo">
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

@@ -1,1 +1,1 @@
-web: gunicorn exclusive_whitening.wsgi:app
+web: gunicorn exclusive_whitening.wsgi:application

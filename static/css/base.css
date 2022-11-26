@@ -4,7 +4,7 @@ html {
 
 body {
     background: url('/media/hero-image.jpg') no-repeat center center fixed;
-    background-size: contain;
+    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Montserrat', sans-serif;

@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = ['localhost', 'ci-pp5.herokuapp.com/', 'https://martin-mcinerney-ci-pp5.herokuapp.com/', '127.0.0.1', ]
+DEBUG = 'DEVELOPMENT' in os.environ
+ALLOWED_HOSTS = ['localhost', 'ci-pp5.herokuapp.com', '127.0.0.1', ]
 
 
 # Application definition

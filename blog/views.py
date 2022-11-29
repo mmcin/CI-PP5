@@ -18,7 +18,7 @@ def post(request,slug):
     context = {
         'post': post,
     }
-    return render(request, 'post-detail.html', context)
+    return render(request, 'post_detail.html', context)
 
 def category_post_list (request, slug):
     category = Category.objects.get(slug = slug)

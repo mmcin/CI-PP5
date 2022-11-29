@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ml-5">
+    <div class="blog-post mt-5">
+        <h2 class="blog-post-title mt-5 mb-2">{{ post.title }}</h2>
+        <a class='mb-2' href="#">Added by: {{ post.author }}</a>
+        <p class="blog-post-meta ">{{ post.timestamp }}</p>
+
+        <p>{{ post.content }}</p>
+
+    </div>
+</div>
+{% endblock %}

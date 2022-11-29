@@ -19,3 +19,11 @@ def post(request,slug):
         'post': post,
     }
     return render(request, 'post-detail.html', context)
+
+def category_post_list (request, slug):
+    category = Category.objects.get(slug = slug)
+    posts = Post.objects.filter(categories__in=[category])
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'post_list.html', context)

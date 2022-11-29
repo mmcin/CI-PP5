@@ -27,3 +27,10 @@ def category_post_list (request, slug):
         'posts': posts,
     }
     return render(request, 'post_list.html', context)
+
+def allposts(request):
+    posts = Post.objects.order_by('-timestamp')
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'all_posts.html', context)

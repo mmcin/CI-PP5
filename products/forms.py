@@ -21,7 +21,7 @@ class ProductForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 
-class ProductReview(forms.ModelForm):
+class ProductReviewForm(forms.ModelForm):
     class Meta:
         model = ProductReview
         fields = '__all__'

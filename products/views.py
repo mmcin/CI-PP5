@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, ProductReview
-from .forms import ProductForm, ProductReview
+from .forms import ProductForm, ProductReviewForm
 
 # Create your views here.
 
@@ -67,8 +67,9 @@ def product_detail(request, product_id):
 
 
     if request.method == 'POST':
-        form = ProductReview(request.POST, request.FILES)
+        form = ProductReviewForm(request.POST, request.FILES)
         if form.is_valid():
+
             form.save()
             messages.success(request, 'Review added!')
             context = {
@@ -80,7 +81,7 @@ def product_detail(request, product_id):
         else:
             messages.error(request, 'Failed to add review. Please ensure the form is valid.')
     else:
-        form = ProductReview()
+        form = ProductReviewForm()
     context = {
             'product': product,
             'form':form,
@@ -157,3 +158,20 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+@login_required
+def delete_review(request, review_id, ):
+    
+    review = get_object_or_404(ProductReview, id = review_id)
+    print(f'I am the review ID {review_id}')
+    print(f'Request.username: {request.user}')
+    print(f'Review.user: : {review.user}')
+   
+    if request.user == review.user:
+        review.delete()
+        messages.success(request, 'Review deleted!')
+    
+        return redirect('product_detail', review.product.id)
+    else:
+        messages.error(request, 'Failed to delete review. Please ensure that you have permission.')
+
+    return redirect('product_detail', review.product.id)

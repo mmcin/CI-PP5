@@ -121,8 +121,8 @@
             {% if review.user == user %}
             <p>Written by: {{ review.user }}</p>
             <button>Edit</button>
-            <button>Delete</button>
-            {% endif %}
+            <a href="{% url 'delete_review' review.id %}">Delete</button>
+                {% endif %}
         </div>
     </div>
 </div>
@@ -130,7 +130,7 @@
 
 {% endif %}
 <div class="row ">
-    <div class="ml-5 col-lg-8 text-center">
+    <div class="ml-5 col-lg-12 text-center">
         {% if user.is_authenticated %}
         <h2>Add a review</h2>
         <form method="POST">

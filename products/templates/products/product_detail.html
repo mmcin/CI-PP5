@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -82,6 +83,8 @@
                             </div>
                         </div>
 
+
+
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -99,9 +102,42 @@
         </div>
     </div>
 </div>
-{% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-{% endblock %}
+{% if product.reviews %}
+<div class="row">
+    <hr>
+
+    <h2>Reviews</h2>
+    <hr>
+
+
+</div>
+<div class="row">
+    <div class="ml-5 col-lg-6">
+        {% if user.is_authenticated %}
+        <form method="POST">
+            {{ form | crispy }}
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% for review in product.reviews.all %}
+<div class="col text-center">
+    <div class="card">
+        <div class="card-body">
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.content }}</p>
+            {% if review.user == user %}
+            <p>Written by: {{ review.user }}</p>
+            <button>Edit</button>
+            <button>Delete</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+
+{% endblock %} {% block postloadjs %} {{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %} {% endblock %}

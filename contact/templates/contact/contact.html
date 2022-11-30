@@ -5,13 +5,15 @@
 
 
 {% block content %}
-<div class="row">
-    <div class="col-lg-6 ml-5 pt-5">
-        <form method="POST">
-            {{ form | crispy }}
-            {% csrf_token %}
-            <button type="submit">Send Message</button>
-        </form>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 ml-5 pt-5">
+            <form method="POST">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <button class='btn-outline-primary btn' type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 </div>
 

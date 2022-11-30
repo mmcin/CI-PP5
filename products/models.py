@@ -33,9 +33,8 @@ class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name ='reviews', on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name ='reviews', on_delete=models.CASCADE)
     content = models.TextField(blank = True, null = True)
-    title = models.TextField()
+    title = models.TextField(default = 'Untitled')
 
 
     def __str__(self):
         return self.title
-    

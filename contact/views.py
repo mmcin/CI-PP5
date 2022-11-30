@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import MessageForm
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -11,7 +13,7 @@ def message(request):
             form.save()
             messages.success(request, 'Message sent to admin!')
         
-            return render("/")
+            return render(request, "home/index.html")
         else:
             messages.error(request, 'Failed to send message. Please ensure the form is valid.')
     else:

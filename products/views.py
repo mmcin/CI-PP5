@@ -66,10 +66,27 @@ def product_detail(request, product_id):
     form = ProductReview
 
 
+    if request.method == 'POST':
+        form = ProductReview(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Review added!')
+            context = {
+            'product': product,
+            'form':form,
+            }
+
+            return render(request, 'products/product_detail.html', context)
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+    else:
+        form = ProductReview()
     context = {
-        'product': product,
-        'form':form,
-    }
+            'product': product,
+            'form':form,
+            }
+
+    
 
     return render(request, 'products/product_detail.html', context)
 

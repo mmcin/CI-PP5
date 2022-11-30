@@ -24,6 +24,6 @@ class ProductForm(forms.ModelForm):
 class ProductReview(forms.ModelForm):
     class Meta:
         model = ProductReview
-        
-        fields ={ 'title','content', }
+        fields = '__all__'
+
         

@@ -3,8 +3,8 @@ from .forms import MessageForm
 
 # Create your views here.
 
-def message(request)
-
+def message(request):
+    form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(request.POST, request.FILES)
         if form.is_valid():

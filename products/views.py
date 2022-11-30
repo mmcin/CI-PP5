@@ -87,8 +87,6 @@ def product_detail(request, product_id):
             'form':form,
             }
 
-    
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -158,6 +156,8 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
 @login_required
 def delete_review(request, review_id, ):
     
@@ -175,3 +175,42 @@ def delete_review(request, review_id, ):
         messages.error(request, 'Failed to delete review. Please ensure that you have permission.')
 
     return redirect('product_detail', review.product.id)
+
+def edit_review(request, review_id):
+    review = get_object_or_404(ProductReview, id= review_id)
+    product = get_object_or_404(Product, pk=review.product.id)
+    form = ProductReviewForm(instance = review)
+    
+    if request.method == 'POST':
+        form = ProductReviewForm(request.POST, request.FILES, instance = review) 
+        if form.is_valid():
+
+            form.save()
+            messages.success(request, 'Review edited!')
+            context = {
+            'product': product,
+            'review':review,
+            'form':form,
+            }
+            return redirect('product_detail', review.product.id)
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+        
+            form = ProductReviewForm(instance = review)
+            context = {
+                    'product': product,
+                    'review':review,
+                    'form':form,
+                    }
+    else:
+        
+        form = ProductReviewForm(instance = review)
+        messages.info(request, f'You are editing {review.title}')
+        context = {
+                    'product': product,
+                    'review':review,
+                    'form':form,
+                    }
+        return render(request, 'products/product_detail.html', context)
+    
+    return render(request, 'products/product_detail.html', context)

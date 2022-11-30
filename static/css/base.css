@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    background: rgb(0, 0, 0) height: calc(100vh - 164px);
     color: #555;
     font-family: 'Montserrat', sans-serif;
 }
@@ -72,7 +72,7 @@ body {
     background: #000 !important;
 }
 
-/* .overlay {
+.overlay {
     height: 100%;
     width: 100%;
     top: 0;
@@ -81,7 +81,7 @@ body {
     background: white;
     z-index: -1;
 
-} */
+}
 
 a.category-badge>span.badge:hover {
     background: #212529 !important;

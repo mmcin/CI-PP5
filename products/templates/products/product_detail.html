@@ -106,21 +106,12 @@
 {% if product.reviews %}
 <div class="row">
     <hr>
-
     <h2>Reviews</h2>
     <hr>
 
 
 </div>
-<div class="row">
-    <div class="ml-5 col-lg-6">
-        {% if user.is_authenticated %}
-        <form method="POST">
-            {{ form | crispy }}
-        </form>
-        {% endif %}
-    </div>
-</div>
+
 {% for review in product.reviews.all %}
 <div class="col text-center">
     <div class="card">
@@ -136,7 +127,20 @@
     </div>
 </div>
 {% endfor %}
+
 {% endif %}
+<div class="row ">
+    <div class="ml-5 col-lg-8 text-center">
+        {% if user.is_authenticated %}
+        <h2>Add a review</h2>
+        <form method="POST">
+            {{ form | crispy }}
+            {% csrf_token %}
+            <button type="submit">Submit Review</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
 
 
 {% endblock %} {% block postloadjs %} {{ block.super }}

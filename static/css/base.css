@@ -287,9 +287,12 @@ input[name='q']::placeholder {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
+
+
     .header-container {
         padding-top: 116px;
     }
+
 
     body {
         height: calc(100vh - 116px);
@@ -353,7 +356,7 @@ input[name='q']::placeholder {
 
 
 #hero-header {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 /* @media screen and (min-width: 1000px) {
@@ -380,6 +383,7 @@ input[name='q']::placeholder {
     border-radius: 15%;
     margin: 0 auto;
     margin-top: 30px;
+    /* display: none; */
 }
 
 #hero-logo {
@@ -387,4 +391,10 @@ input[name='q']::placeholder {
 
     width: 100%;
     padding: 20px;
+}
+
+@media (min-width: 991px) {
+    #hero-logo-container {
+        display: none;
+    }
 }

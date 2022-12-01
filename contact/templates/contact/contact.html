@@ -7,7 +7,10 @@
 {% block content %}
 <div class="container">
     <div class="row">
+
         <div class="col-lg-6 ml-5 pt-5">
+            <h1>Send us a message</h1>
+            <p>We'll be happy to hear from you!</p>
             <form method="POST">
                 {{ form | crispy }}
                 {% csrf_token %}

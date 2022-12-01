@@ -100,7 +100,7 @@
         </div>
     </div>
 </div>
-<hr>
+
 <div class="container">
     {% if product.reviews %}
     <div class="row">
@@ -129,14 +129,14 @@
         {% endfor %}
         {% endif %}
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="ml-5 col-lg-8 pt-5">
             {% if user.is_authenticated %}
             <h2>Add a review</h2>
             <form method="POST">
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button class='btn btn-outline-primary' type="submit">Submit Review</button>
+                <button class='btn btn-outline-primary mb-5' type="submit">Submit Review</button>
             </form>
             {% endif %}
         </div>

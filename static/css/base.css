@@ -363,6 +363,28 @@ input[name='q']::placeholder {
 } */
 
 #hero-background {
-    background: url('/media/hero-image.jpg') no-repeat center center fixed;
-    background-size: contain;
+    background: url('/media/snow.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#hero {
+    margin-top: 200px;
+    background: rgb(49, 48, 48);
+    color: #fafafa;
+}
+
+#hero-logo-container {
+    background: #fafafa;
+    width: 50%;
+    border-radius: 15%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#hero-logo {
+
+
+    width: 100%;
+    padding: 20px;
 }

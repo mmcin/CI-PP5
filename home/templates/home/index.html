@@ -1,28 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-{% endblock %}
-
 {% block content %}
-<div class="container-fluid h-100">
-    <div class="row h-100 justify-content-center" id="hero">
-        <div class=" col-sm-10 col-md-6 col-lg-6 text-center">
-            <div id="hero-logo-container">
-                <img id="hero-logo" src="{{ MEDIA_URL }}xylogo.png" alt="The Exclusive Whitening company logo">
-            </div>
-            <h1 class="display-5 mt-6 text-center" id="hero-header">
-                Exclusive Teeth Whitening
-            </h1>
-            <p class='text-center'>Be confident like never before. Dentist quality teeth whitening at home.
-                Say goodbye to expensive dentist bills.
-            </p>
-            <div class="my-5 text-center">
-                <h4>
-                    <a href="{% url 'products' %}"
-                        class="shop-now-button pink-background btn btn-lg rounded-5 text-uppercase py-3">Buy
-                        Kits Now</a>
-                </h4>
+<div class="container-fluid" id="hero-background">
+    <div class="row justify-content-center">
+        <div class="container-fluid" id="hero">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-6 col-lg-6 text-center">
+                    <div id="hero-logo-container">
+                        <img id="hero-logo" src="{{ MEDIA_URL }}xylogo.png" alt="The Exclusive Whitening company logo">
+                    </div>
+                    <h1 class="display-5 mt-6 text-center" id="hero-header">
+                        Exclusive Teeth Whitening
+                    </h1>
+                    <p class='text-center'>Be confident like never before. Dentist quality teeth whitening at home.
+                        Say goodbye to expensive dentist bills.
+                    </p>
+                    <div class="my-5 text-center">
+                        <h4>
+                            <a href="{% url 'products' %}"
+                                class="shop-now-button pink-background btn btn-lg rounded-5 text-uppercase py-3">Buy
+                                Kits Now</a>
+                        </h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

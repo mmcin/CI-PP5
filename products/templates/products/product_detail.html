@@ -100,46 +100,48 @@
         </div>
     </div>
 </div>
+<hr>
+<div class="container">
+    {% if product.reviews %}
+    <div class="row">
+        <hr>
+        <h2>Reviews</h2>
+        <hr>
+    </div>
 
-{% if product.reviews %}
-<div class="row">
-    <hr>
-    <h2>Reviews</h2>
-    <hr>
+    <div class="row justify-content-center">
+        {% for review in product.reviews.all %}
+        <div class="col-lg-6 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h3>{{ review.title }}</h3>
+                    <p>{{ review.content }}</p>
+                    {% if review.user == user %}
+                    <p>Written by: {{ review.user }}</p>
 
 
-</div>
-
-{% for review in product.reviews.all %}
-<div class="col-lg-6 text-center">
-    <div class="card">
-        <div class="card-body">
-            <h3>{{ review.title }}</h3>
-            <p>{{ review.content }}</p>
-            {% if review.user == user %}
-            <p>Written by: {{ review.user }}</p>
-
-
-            <a href="{% url 'edit_review' review.id %}">Edit</a> |
-            <a class='text-danger' href="{% url 'delete_review' review.id %}">Delete</a>
+                    <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                    <a class='text-danger' href="{% url 'delete_review' review.id %}">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="row">
+        <div class="ml-5 col-lg-8 pt-5">
+            {% if user.is_authenticated %}
+            <h2>Add a review</h2>
+            <form method="POST">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <button class='btn btn-outline-primary' type="submit">Submit Review</button>
+            </form>
             {% endif %}
         </div>
     </div>
-</div>
-{% endfor %}
 
-{% endif %}
-<div class="row">
-    <div class="ml-5 col-lg-6 pt-5">
-        {% if user.is_authenticated %}
-        <h2>Add a review</h2>
-        <form method="POST">
-            {{ form | crispy }}
-            {% csrf_token %}
-            <button class='btn btn-outline-primary' type="submit">Submit Review</button>
-        </form>
-        {% endif %}
-    </div>
 </div>
 
 

@@ -69,7 +69,8 @@ def product_detail(request, product_id):
     if request.method == 'POST':
         form = ProductReviewForm(request.POST, request.FILES)
         if form.is_valid():
-
+            form.instance.user = request.user
+            form.instance.product = product
             form.save()
             messages.success(request, 'Review added!')
             context = {
@@ -162,9 +163,6 @@ def delete_product(request, product_id):
 def delete_review(request, review_id, ):
     
     review = get_object_or_404(ProductReview, id = review_id)
-    print(f'I am the review ID {review_id}')
-    print(f'Request.username: {request.user}')
-    print(f'Review.user: : {review.user}')
    
     if request.user == review.user:
         review.delete()

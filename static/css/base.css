@@ -366,3 +366,7 @@ input[name='q']::placeholder {
         margin-top: 220px;
     }
 }
+
+#blog-thumbnail {
+    object-fit: cover;
+}

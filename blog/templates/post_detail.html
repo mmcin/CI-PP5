@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="ml-5">
-    <div class="blog-post mt-5">
+
+<div class="row ml-5">
+    <div class="col-lg-8 blog-post mt-5">
         <h2 class="blog-post-title mt-5 mb-2">{{ post.title }}</h2>
         <a class='mb-2' href="#">Added by: {{ post.author }}</a>
         <p class="blog-post-meta ">{{ post.timestamp }}</p>
-
         <p>{{ post.content }}</p>
-
+    </div>
+    <div class="col-lg-4 mt-5">
+        <img width="250vw" height="250vw" object-fit="cover" src="{{ MEDIA_URL }}{{ post.thumbnail }}">
     </div>
 </div>
 {% endblock %}

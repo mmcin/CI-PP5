@@ -4,6 +4,7 @@ from django.db import models
 class Message(models.Model):
     name = models.CharField(max_length = 254)
     phone_number = models.IntegerField()
+    email = models.CharField(max_length = 254, )
     subject = models.CharField(max_length = 254)
     message = models.CharField(max_length = 1000)
 

@@ -103,7 +103,7 @@
 
 <div class="container">
     {% if product.reviews %}
-    <div class="row">
+    <div class="row mb-4">
         <hr>
         <h2>Reviews</h2>
         <hr>
@@ -111,7 +111,7 @@
 
     <div class="row justify-content-center">
         {% for review in product.reviews.all %}
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 text-center mb-5">
             <div class="card">
                 <div class="card-body">
                     <h3>{{ review.title }}</h3>

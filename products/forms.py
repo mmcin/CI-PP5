@@ -39,7 +39,7 @@ class ProductReviewForm(forms.ModelForm):
             'content': 'Write your review here',
         }
 
-        self.fields['title'].widget.attrs['autofocus'] = True
+        
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:

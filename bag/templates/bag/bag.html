@@ -8,11 +8,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container mb-2 mt-5">
     <div class="row">
-        <div class="col mt-5">
-
+        <div>
             <h2 class="logo-font mb-4">Shopping Bag</h2>
             <hr>
         </div>
@@ -28,7 +26,7 @@
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
+
                             <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
@@ -41,18 +39,6 @@
                             {% else %}
                             <img class="img-fluid rounded" src="/media/noimage.jpeg" alt="{{ item.product.name }}">
                             {% endif %}
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0"><strong>Size:
-                                </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
-                            </p>
-                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                        </td>
-                        <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -91,6 +77,17 @@
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
                                 data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0"><strong>Size:
+                                </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                            </p>
+                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>

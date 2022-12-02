@@ -7,10 +7,10 @@ from .models import Message
         
 class MessageForm(forms.ModelForm):
     class Meta:
+        fields = '__all__'
         model = Message
-        fields = ('name', 'email', 'phone_number',
-                  'subject', 'message',
-                  )
+        
+        
 
     def __init__(self, *args, **kwargs):
         """

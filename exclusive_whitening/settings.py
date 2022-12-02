@@ -174,7 +174,7 @@ STATIC_URL = '/static/'
 # PROD
 STATIC_ROOT = 'static'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/static/media/'
 MEDIA_ROOT = 'static/media'
 
 if 'USE_AWS' in os.environ:

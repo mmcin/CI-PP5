@@ -3,8 +3,6 @@ html {
 }
 
 body {
-
-
     color: #555;
     font-family: 'Montserrat', sans-serif;
 }
@@ -395,4 +393,8 @@ input[name='q']::placeholder {
     #hero-logo-container {
         display: none;
     }
+}
+
+.min-height-100 {
+    min-height: 100vh;
 }

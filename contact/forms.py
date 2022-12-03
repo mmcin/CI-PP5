@@ -2,14 +2,11 @@ from django import forms
 from .models import Message
 
 
-
-
-        
 class MessageForm(forms.ModelForm):
+    """renders the contact form"""
     class Meta:
         fields = '__all__'
         model = Message
-        
         
 
     def __init__(self, *args, **kwargs):

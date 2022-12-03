@@ -6,6 +6,7 @@ from django.contrib import messages
 # Create your views here.
 
 def message(request):
+    """Saves contact form input to db"""
     form = MessageForm()
     if request.method == 'POST':
         form = MessageForm(request.POST, request.FILES)

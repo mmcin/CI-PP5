@@ -33,6 +33,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """Processs the checkout"""
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -52,6 +53,8 @@ def checkout(request):
         }
 
         order_form = OrderForm(form_data)
+
+        """Creates the order/line order and saves them to the db"""
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]

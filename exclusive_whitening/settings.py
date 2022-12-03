@@ -104,7 +104,6 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -113,9 +112,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-
 WSGI_APPLICATION = 'exclusive_whitening.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -161,7 +158,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

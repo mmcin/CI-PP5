@@ -3,9 +3,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Category(models.Model):
-
     verbose_name_plural = 'Categories'
-    
     name = models.CharField(max_length = 254)
     friendly_name = models.CharField(max_length = 254, null = True, blank = True)
 
@@ -13,9 +11,11 @@ class Category(models.Model):
     def __str__(self):
         return self.name
     
+
     def get_friendly_name(self):
         return self.friendly_name
     
+
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -28,6 +28,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name ='reviews', on_delete=models.CASCADE)

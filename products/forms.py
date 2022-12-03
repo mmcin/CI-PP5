@@ -5,7 +5,7 @@ from .models import Product, Category, ProductReview
 
 
 class ProductForm(forms.ModelForm):
-
+"""for adding products to db"""
     class Meta:
         model = Product
         fields = '__all__'
@@ -24,6 +24,7 @@ class ProductForm(forms.ModelForm):
 
         
 class ProductReviewForm(forms.ModelForm):
+    """for adding product reviews"""
     class Meta:
         model = ProductReview
         fields = ('title', 'content',)
@@ -31,7 +32,7 @@ class ProductReviewForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        labels
         """
         super().__init__(*args, **kwargs)
         placeholders = {

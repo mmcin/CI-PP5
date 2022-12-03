@@ -11,13 +11,13 @@ from .forms import ProductForm, ProductReviewForm
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
-
     products = Product.objects.all()
     query = None
     categories = None
     sort = None
     direction = None
 
+# sorting logic
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -61,10 +61,8 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
     form = ProductReview
-
 
     if request.method == 'POST':
         form = ProductReviewForm(request.POST, request.FILES)
@@ -161,7 +159,7 @@ def delete_product(request, product_id):
 
 @login_required
 def delete_review(request, review_id, ):
-    
+    """delete a product review"""
     review = get_object_or_404(ProductReview, id = review_id)
    
     if request.user == review.user:
@@ -175,6 +173,7 @@ def delete_review(request, review_id, ):
     return redirect('product_detail', review.product.id)
 
 def edit_review(request, review_id):
+    """edit a product review"""
     review = get_object_or_404(ProductReview, id= review_id)
     product = get_object_or_404(Product, pk=review.product.id)
     form = ProductReviewForm(instance = review)

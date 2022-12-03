@@ -352,16 +352,10 @@ input[name='q']::placeholder {
 }
 
 
-
+/* hero section */
 #hero-header {
     margin-top: 40px;
 }
-
-/* @media screen and (min-width: 1000px) {
-    body {
-        margin-top: 220px;
-    }
-} */
 
 #hero-background {
     background: url('{{ MEDIA_URL }}snow.jpg') no-repeat center center fixed;
@@ -395,10 +389,12 @@ input[name='q']::placeholder {
     }
 }
 
+/* makes sure that footer reachers bottom of viewport at least */
 .min-height-100 {
     min-height: 100vh;
 }
 
+/* didn't fancy a numerical id name */
 #four-oh-four {
     margin: 30px auto;
 }

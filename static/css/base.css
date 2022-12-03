@@ -405,4 +405,5 @@ input[name='q']::placeholder {
 
 #privacy {
     margin: 0 auto;
+    color: black;
 }

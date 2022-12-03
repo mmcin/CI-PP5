@@ -4,6 +4,7 @@ from django.db import models
 User = get_user_model()
 
 class Author(models.Model):
+    """Post author"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_picture = models.ImageField()
 
@@ -11,6 +12,7 @@ class Author(models.Model):
         return self.user.username
 
 class Category(models.Model):
+    """Post category not currently in use but a planned feature"""
     title = models.CharField(max_length=20)
     subtitle = models.CharField(max_length=20)
     slug = models.SlugField()
@@ -20,6 +22,7 @@ class Category(models.Model):
         return self.title
 
 class Post(models.Model):
+    """the post model"""
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     overview = models.TextField()

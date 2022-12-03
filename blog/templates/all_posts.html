@@ -27,7 +27,8 @@
                             <a href="{% url 'post' post.slug %}" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img width="200" height="250" object-fit="cover" src="{{ MEDIA_URL }}{{ post.thumbnail }}">
+                        <img width="200" height="250" object-fit="cover" src="{{ MEDIA_URL }}{{ post.thumbnail }}"
+                            alt="An image related to the blog post titled: {{ post.title }}">
 
 
                     </div>

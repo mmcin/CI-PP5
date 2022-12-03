@@ -402,3 +402,7 @@ input[name='q']::placeholder {
 #four-oh-four {
     margin: 30px auto;
 }
+
+#privacy {
+    margin: 0 auto;
+}

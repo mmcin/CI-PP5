@@ -2,13 +2,15 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 
-# Create your views here.
+
+#A view to return the bag page
+
 def view_bag(request):
-    """A view to return the bag page"""
+
     return render(request, 'bag/bag.html')
 
 def add_to_bag(request, item_id):
-    """Add a specified quantity to the shopping bag"""
+    """Takes request and item_id"""
     product = get_object_or_404(Product, pk = item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -26,8 +28,8 @@ def add_to_bag(request, item_id):
 
     return redirect(redirect_url)
 
+#Adjust the quantity of the specified product to the specified amount
 def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
     product = get_object_or_404(Product, pk = item_id)
     quantity = int(request.POST.get('quantity'))
     size = None

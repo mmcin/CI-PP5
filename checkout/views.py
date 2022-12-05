@@ -153,12 +153,14 @@ def checkout_success(request, order_number):
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
-        order_products = order.lineitems.products.all()
-        for product in order_products:
-            product.stock_level = product.stock_level - 1
-            product.save()
         order.user_profile = profile
         order.save()
+        order_items = order.lineitems.all()
+        for order_item in order_items:
+            if order_item.product.stock_level > 0:
+                
+                order_item.product.stock_level = order_item.product.stock_level - 1
+                order_item.product.save()
 
         # Save the user's info
         if save_info:

@@ -162,7 +162,7 @@ def checkout_success(request, order_number):
                 order_item.product.stock_level = order_item.product.stock_level - order_item.quantity
                 order_item.product.save()
             else:
-                messages.success(request, f'Not enough stock available. Please contact us for more information.')
+                messages.error(request, f'Not enough stock available. Please contact us for more information.')
 
         # Save the user's info
         if save_info:

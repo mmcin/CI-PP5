@@ -80,8 +80,11 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
+                                        {% if product.stock_level > 0  %}
                                         <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                        {% else %}
                                         <p class="text-danger">OUT OF STOCK</p>
+                                        {% endif %}
                                         {% if product.category %}
                                         <p class="small mt-1 mb-0">
                                             <a class="text-muted"

@@ -405,10 +405,16 @@ input[name='q']::placeholder {
     color: black;
 }
 
+#privacy-link {
+    margin: 30px auto;
+    margin-left: 20px;
+    text-align: center;
+    color: #000;
+}
+
 #chimp-button {
     background-color: #045A67;
     clear: both;
-
     border: 0 none;
     border-radius: 4px;
     transition: all 0.23s ease-in-out 0s;

@@ -50,6 +50,7 @@
                 {% endif %}
 
                 <p class="mt-3">{{ product.description }}</p>
+                {% if product.stock_level > 0 %}
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -97,6 +98,9 @@
 
                     </div>
                 </form>
+                {% else %}
+                <p class="text-danger">OUT OF STOCK</p>
+                {% endif %}
             </div>
         </div>
     </div>

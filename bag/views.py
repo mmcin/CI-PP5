@@ -7,7 +7,7 @@ from products.models import Product
 
 def view_bag(request):
 
-    return render(request, 'bag/bag.html')
+    return render(request, 'bag/bag.html', )
 
 def add_to_bag(request, item_id):
     """Takes request and item_id"""

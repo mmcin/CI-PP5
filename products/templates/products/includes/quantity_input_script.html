@@ -5,6 +5,7 @@
      * which prevents any errors 
      */
     function handleEnableDisable(itemId, size) {
+        var stockQuantity = parseInt($(`.id_qty_${itemId}`).attr("max"));
         if (size) {
             var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
         } else {
@@ -12,7 +13,7 @@
         }
 
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
+        var plusDisabled = currentValue > (stockQuantity - 1);
 
         if (size) {
             $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);

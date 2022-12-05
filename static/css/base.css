@@ -339,8 +339,8 @@ input[name='q']::placeholder {
     padding: 10px;
 }
 
-.pink-background {
-    background-color: #17a2b8;
+.accent-color {
+    background-color: #045A67;
 
 }
 

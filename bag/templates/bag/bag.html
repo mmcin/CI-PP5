@@ -92,6 +92,16 @@
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
+                    {% if item.quantity > item.product.stock_level %}
+                    <script type="text/javascript">
+                        // if the quantity is higher than the available stock of an item it will be reduced to the max available number of stock items
+                        function fixQuantity() {
+                            var form = $('.form');
+                            form.submit();
+                        }
+                        fixQuantity();
+                    </script>
+                    {% endif %}
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
@@ -142,13 +152,10 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
+
+
 <script type="text/javascript">
     // Update quantity on click
-    function onLoad(e) {
-        var form = $(this).prev('.update-form');
-
-        form.submit();
-    }
 
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');

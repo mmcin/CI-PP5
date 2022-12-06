@@ -17,5 +17,20 @@ Postcode = any 5 digits (Example: 12345)
 ## Showcase
 ![Screenshot 2022-12-06 at 14 34 35](https://user-images.githubusercontent.com/98256205/205940341-ff00f739-e8ed-4397-8e71-89a525e7bd70.png)
 
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [UX](#ux-user-experience)
+- [Architecture](#architecture)
+- [Design](#design)
+- [Features](#features)
+- [Web Marketing](#web-marketing)
+- [Social Media](#social-media)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 
 

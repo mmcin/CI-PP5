@@ -83,7 +83,7 @@ def product_detail(request, product_id):
             messages.error(request, 'Failed to add review. Please ensure the form is valid.')
     else:
         form = ProductReviewForm()
-    context = {
+        context = {
             'product': product,
             'form':form,
             }

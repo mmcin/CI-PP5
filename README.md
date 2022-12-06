@@ -37,6 +37,7 @@ Postcode = any 5 digits (Example: 12345)
 
 You can view the kanban board [here](https://github.com/users/martin-mcinerney/projects/4/views/1) and the issues page [here.](https://github.com/martin-mcinerney/CI-PP5/issues)
 
+### Admin 
 - As an admin want a panel to create a blog post.
 - As an admin want a panel to edit a blog post.
 - As an admin want a panel to delete a blog post.
@@ -45,6 +46,7 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 - As an admin I want a product edit form so that I can edit products on the site.
 - As an admin I want a product delete so that I can delete products on the site.
 
+### User
 - As a user I can create an account so that I can save and secure my details.
 - As a user I can log in so that I can access my account.
 - As a user I can log out so that I can secure my account.

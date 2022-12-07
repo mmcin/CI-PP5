@@ -72,5 +72,27 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 - As a user I have messages so that I can receive feedback on my actions.
 - As a user I can avail of a responsive design so that I can view the app on mobile or desktop devices.
 
+### Overall Goals
+* Create an e-commerce cloud-hosted Full-Stack web application to sell dental products online.
+* Allow superusers access to full CRUD (create, read, update and delete) functionality on reviews / articles and products respectively.
+* To provide users with a targeted product selection and smooth customer experience when shopping with Exclusive Whitnening.
+
+### Strategy
+* Exclusive Whitnening is focused on selling B2C products to end users. Habits of the consumers have changed recently and many more consumers than ever before have turned to home whitening versus in office whitening procedures. This is where Exclusive Whitnening aims to benefit consumers by offering large discounts on the whitening paraphernalia.
+
+### Site User / Target Audience / Demographic
+* Target market is aimed at anyone old enough to use the products.
+* People who may have stained teeth. eg Smokers, Coffee Drinkers
+* People who are interested in dental articles.
+
+### Site Goals
+* The site's main purpose is immediately clear
+* Simple navigation that allows the user to find information and resources intuitively
+* User authentication
+* CRUD functionality for superuser(s)
+
+## Architecture
+### Database Schema
+
 
 

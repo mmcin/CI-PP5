@@ -142,6 +142,8 @@
         <div class="ml-4 mr-4 col-lg-8 pt-5 allauth-form-inner-content">
             {% if user.is_authenticated %}
             <h2>Add a review</h2>
+            <p>If you have purchased this item in the past then please leave a review. Admin will verify your purchase
+                before approving.</p>
             <form method="POST">
                 {{ form | crispy }}
                 {% csrf_token %}

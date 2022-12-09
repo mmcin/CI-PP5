@@ -72,7 +72,7 @@ def product_detail(request, product_id):
             form.instance.user = request.user
             form.instance.product = product
             form.save()
-            messages.success(request, 'Review added!')
+            messages.success(request, 'Review sent to admin for approval!')
             context = {
             'product': product,
             'form':form,

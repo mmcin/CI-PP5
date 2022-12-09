@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container template-body">
     <div class="row">
         <div class="col text-center mt-3">
@@ -104,7 +103,8 @@
                                         <br>
                                         <small class="ml-3">
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                            <a class="text-danger"
+                                            <a onclick="return confirm('Are you sure you want to Delete? This action in PERMANENT.');"
+                                                class="text-danger"
                                                 href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
                                         {% endif %}

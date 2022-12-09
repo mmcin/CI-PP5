@@ -12,7 +12,7 @@ class Author(models.Model):
         return self.user.username
 
 class Category(models.Model):
-    """Post category not currently in use but a planned feature"""
+    """Post category"""
     title = models.CharField(max_length=20)
     subtitle = models.CharField(max_length=20)
     slug = models.SlugField()

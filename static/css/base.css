@@ -403,11 +403,13 @@ input[name='q']::placeholder {
 #privacy {
     margin: 0 auto;
     color: black;
+
 }
 
 #privacy-link {
     margin: 30px auto;
-
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
     text-align: center;
     color: #000;
 }

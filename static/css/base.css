@@ -435,3 +435,8 @@ input[name='q']::placeholder {
     white-space: nowrap;
     width: fit-content;
 }
+
+.max-height {
+    max-height: 120px;
+    object-fit: cover;
+}

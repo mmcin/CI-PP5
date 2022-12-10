@@ -93,7 +93,8 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 
 ## Architecture
 ### Database Schema
-![Screenshot 2022-12-09 at 16 37 26](https://user-images.githubusercontent.com/98256205/206749163-9cf210b6-facd-46c9-8167-b7890c2d5476.png)
+![Screenshot 2022-12-10 at 08 54 29](https://user-images.githubusercontent.com/98256205/206842117-bbc77406-6da6-42c0-abb5-1d7cb377b06d.png)
+
 
 ## Design
 ### Wireframes

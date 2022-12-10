@@ -16,10 +16,6 @@ body {
     width: 320px;
 }
 
-/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -451,4 +447,9 @@ input[name='q']::placeholder {
 .max-height {
     max-height: 120px;
     object-fit: cover;
+}
+
+/* mailchimp asterisk */
+#mc_embed_signup .asterisk {
+    color: red;
 }

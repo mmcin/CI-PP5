@@ -13,15 +13,17 @@ def message(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Message sent to admin!')
-        
+
             return render(request, "home/index.html")
         else:
-            messages.error(request, 'Failed to send message. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to send message. Please ensure the form is valid.')
     else:
         form = MessageForm()
         context = {
-                'form':form,
-                }
+            'form': form,
+        }
         return render(request, 'contact/contact.html', context)
-    
+
     return render(request, 'contact/contact.html')

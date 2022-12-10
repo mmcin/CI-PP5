@@ -5,9 +5,9 @@ from .models import Product, Category, ProductReview
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
-        'sku', 
+        'sku',
         'stock_level',
-        'name', 
+        'name',
         'category',
         'price',
         'rating',
@@ -15,17 +15,16 @@ class ProductAdmin(admin.ModelAdmin):
     )
     ordering = ('name',)
 
-    
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'name', 
+        'name',
         'friendly_name',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 
 admin.site.register(Category, CategoryAdmin)
 
 admin.site.register(ProductReview)
-
-

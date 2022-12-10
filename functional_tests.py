@@ -5,6 +5,7 @@ import unittest
 from django.contrib.auth.models import User
 from django.test import TestCase
 
+
 class AuthenticationTest(unittest.TestCase):
 
     def setUp(self):
@@ -19,4 +20,3 @@ class AuthenticationTest(unittest.TestCase):
 
     if __name__ == '__main__':
         unittest.main(warnings='ignore')
-

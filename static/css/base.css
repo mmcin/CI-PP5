@@ -1,3 +1,5 @@
+@import url('//cdn-images.mailchimp.com/embedcode/classic-071822.css');
+
 html {
     height: 100%;
 }
@@ -6,8 +8,6 @@ body {
     color: #555;
     font-family: 'Montserrat', sans-serif;
 }
-
-@import url('//cdn-images.mailchimp.com/embedcode/classic-071822.css');
 
 #mc_embed_signup {
     background: #fff;
@@ -280,7 +280,6 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -365,7 +364,6 @@ input[name='q']::placeholder {
     color: #222;
 }
 
-
 /* hero section */
 #hero-header {
     margin-top: 40px;
@@ -413,6 +411,7 @@ input[name='q']::placeholder {
     margin: 30px auto;
 }
 
+/* base template */
 #privacy {
     margin: 0 auto;
     color: black;

@@ -3,6 +3,7 @@ from django.db import models
 
 User = get_user_model()
 
+
 class Author(models.Model):
     """Post author"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -10,6 +11,7 @@ class Author(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Category(models.Model):
     """Post category"""
@@ -20,6 +22,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Post(models.Model):
     """the post model"""

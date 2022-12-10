@@ -5,6 +5,6 @@ from blog.views import blog, post, category_post_list, allposts
 
 
 urlpatterns = [
-    path('post/<slug>/', post, name = 'post'),
-    path('posts/', allposts, name = 'allposts'),
+    path('post/<slug>/', post, name='post'),
+    path('posts/', allposts, name='allposts'),
 ]

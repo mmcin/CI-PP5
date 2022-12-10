@@ -7,7 +7,6 @@ class MessageForm(forms.ModelForm):
     class Meta:
         fields = '__all__'
         model = Message
-        
 
     def __init__(self, *args, **kwargs):
         """

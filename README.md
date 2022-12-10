@@ -240,4 +240,5 @@ Mailchimp is used to gain new customers and retain existing. Mailchimp enables t
 My homepage has a few accessibility errors that are due to the nav bar setup. All pages have above 90% scores except for in accessibility where the nav layout having two elements with the same id brings the score down. Also there is an error asking to surround the mobile nav li items in an ul or ol. This is not neccesary so I cam ignorning it.
 ![googlechrome github io_lighthouse_viewer_](https://user-images.githubusercontent.com/98256205/206860255-c6792f58-514d-4e23-99e8-b41b357e8750.png)
 
+### HTML Validation
 

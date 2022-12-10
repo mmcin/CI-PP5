@@ -164,5 +164,20 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 ### Product Management
 ![ci-pp5 herokuapp com_products_add_](https://user-images.githubusercontent.com/98256205/206856248-5e5ee1b7-46c7-4fe5-8a6d-c3a0eb076878.png)
 
+### Log In
+![ci-pp5 herokuapp com_accounts_login_](https://user-images.githubusercontent.com/98256205/206856546-6d886e78-e75c-4929-a9cf-a98819d2946b.png)
+
+
+### Log Out
+![Screenshot 2022-12-10 at 13 00 27](https://user-images.githubusercontent.com/98256205/206856552-1676e225-7624-49c3-917d-b49e2dc68977.png)
+
+
+### Sign Up
+![ci-pp5 herokuapp com_accounts_signup_](https://user-images.githubusercontent.com/98256205/206856531-cd5ff3b9-fbf9-486b-b077-c63291019b3e.png)
+
+
+### Forgot Password
+![ci-pp5 herokuapp com_accounts_password_reset_](https://user-images.githubusercontent.com/98256205/206856529-ea9c1163-7d25-400c-a8c0-1b19c4535ae2.png)
+
 
 

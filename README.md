@@ -127,6 +127,8 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 ![Screenshot 2022-12-10 at 11 29 51](https://user-images.githubusercontent.com/98256205/206852795-8a2f332c-ef21-4043-9d06-005a7b4609fa.png)
 
 ## Typography
+The site uses "Montserrat" and "Lato" from Google Fonts.
+
 ## Features
 ### Existing Features
 

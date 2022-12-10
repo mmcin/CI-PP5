@@ -118,3 +118,7 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 
 ### Contact
 ![Screenshot 2022-12-10 at 09 41 54](https://user-images.githubusercontent.com/98256205/206850342-ca54fed6-6cf8-42c7-bfa1-866554ef5478.png)
+
+## Navigation
+### Entity Relationship Diagram
+![Screenshot 2022-12-10 at 11 10 41](https://user-images.githubusercontent.com/98256205/206852111-947e1048-e394-4f02-8b58-d0a4f0001135.png)

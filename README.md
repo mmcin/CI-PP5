@@ -132,36 +132,50 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 ## Features
 ### Existing Features
 ### Homepage
+Here we can see the nav bar along with the authentication options. User can sign up to mailing lists. Hero section has a CTA leading customers to the products section where they can make a purchase. Nav bar and footer are visible here. They expand as shown below.
+![Screenshot 2022-12-10 at 11 49 49](https://user-images.githubusercontent.com/98256205/206857077-cda9b66e-63f0-426d-8e0c-1bd53aea7798.png)
+![Screenshot 2022-12-10 at 11 50 12](https://user-images.githubusercontent.com/98256205/206857084-0f510d6e-928c-43ff-98ad-65e292c6f4ef.png)
+
 ![ci-pp5 herokuapp com_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853704-e39eb2f8-cde2-40c7-b3a1-27873a1c93e3.png)
 
 ### Products
+Here the products are listed. Out of stock items are marked as such. Clicking the item image leads to the product detail page.
 ![ci-pp5 herokuapp com_products_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853757-6500ef9f-2f67-4235-ae29-8877e2eac7c6.png)
 
 ### Product Detail
+Here there are details on a product. Reviews are displayed if applicable. Super users can edit or delete a product. Logged in users can review a product. If the admin approves the review it will be displayed. I had hoped to add the logic to the program that checked if the user had bought a product in the past but it proved beyond the scope of the timeframe.  
 ![ci-pp5 herokuapp com_products_3_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853770-9f0232e8-ace0-4487-9ae0-7b3b1a609f1c.png)
 
 ### Blog
+Admin controlled blog page. Posts are added in Django admin panel. Click to open and lead to Blog Detail page.
 ![ci-pp5 herokuapp com_blog_posts_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853783-b293822a-9bb4-433b-946c-4823caa9ab56.png)
 
 ### Blog Detail
+Opens the blog post into a fuller view so that the body can be read.
 ![ci-pp5 herokuapp com_blog_post_ice-can-be-nice_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853791-34204f42-8671-4be3-83e1-77fb73b50de7.png)
 
 ### Contact
+Contact form that stores messages in the database.
 ![ci-pp5 herokuapp com_contact_contact_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853809-2a57c941-45e5-4fdd-8b36-4efb41c870ef.png)
 
 ### Profile
+Users profile info. Their address will auto fill at checkout.
 ![ci-pp5 herokuapp com_profile_ (2)](https://user-images.githubusercontent.com/98256205/206856035-09d3aff1-e754-467f-955e-84ebf83969fd.png)
 
 ### Shopping Bag
+Items that have been placed in the bag are displayed and the checkout can be accessed from here.
 ![ci-pp5 herokuapp com_bag_](https://user-images.githubusercontent.com/98256205/206856055-97830d4a-75f7-4373-aa4f-c57e08041721.png)
 
 ### Checkout
+Fill out to buy the products in the bag.
 ![ci-pp5 herokuapp com_checkout_ (1)](https://user-images.githubusercontent.com/98256205/206856083-135d4a2d-5fca-4f1f-9039-192342b1f015.png)
 
 ### Checkout Success
+An order was successfully placed.
 ![ci-pp5 herokuapp com_checkout_checkout_success_74DC5ECABEFF4FD4875D304CDCD1524C (2)](https://user-images.githubusercontent.com/98256205/206856149-d5203b26-d190-46cf-881e-6c649c04ca78.png)
 
 ### Product Management
+Admin can add a product.
 ![ci-pp5 herokuapp com_products_add_](https://user-images.githubusercontent.com/98256205/206856248-5e5ee1b7-46c7-4fe5-8a6d-c3a0eb076878.png)
 
 ### Log In

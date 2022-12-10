@@ -241,4 +241,18 @@ My homepage has a few accessibility errors that are due to the nav bar setup. Al
 ![googlechrome github io_lighthouse_viewer_](https://user-images.githubusercontent.com/98256205/206860255-c6792f58-514d-4e23-99e8-b41b357e8750.png)
 
 ### HTML Validation
+HTML files that have been validated with W3.
+- index.html
+- products.html
+- product_detail.html
+- add_product.html
+- edit_product.html
+- bag.html
+- checkout.html
+- checkout_success.html
+- contact.html
+- profiles.html
+- 404.html
+- blog.html
+- blog_detail.html
 

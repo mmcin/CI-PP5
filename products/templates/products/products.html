@@ -60,53 +60,51 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <a href="{% url 'product_detail' product.id %}">
-                        <div class="card h-100 border-0">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid max-height" src="{{ product.image.url }}"
-                                    alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpeg"
-                                    alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        {% if product.stock_level > 0  %}
-                                        <p>Left in stock: {{ product.stock_level }}</p>
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                        {% else %}
-                                        <p class="text-danger">OUT OF STOCK</p>
-                                        {% endif %}
-                                        {% if product.category %}
-                                        <p class="small mt-1 mb-0">
-                                            <a class="text-muted"
-                                                href="{% url 'products' %}?category={{ product.category.name }}">
-                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                            </a>
-                                        </p>
-                                        {% endif %}
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid max-height" src="{{ product.image.url }}"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpeg"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    {% if product.stock_level > 0  %}
+                                    <p>Left in stock: {{ product.stock_level }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    {% else %}
+                                    <p class="text-danger">OUT OF STOCK</p>
+                                    {% endif %}
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
 
-                                        {% if request.user.is_superuser %}
-                                        <br>
-                                        <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                            <a onclick="return confirm('Are you sure you want to Delete? This action is PERMANENT.');"
-                                                class="text-danger"
-                                                href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </small>
-                                        {% endif %}
-                                    </div>
+                                    {% if request.user.is_superuser %}
+                                    <br>
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a onclick="return confirm('Are you sure you want to Delete? This action is PERMANENT.');"
+                                            class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">

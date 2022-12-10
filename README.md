@@ -133,6 +133,7 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 ### Existing Features
 ### Homepage
 Here we can see the nav bar along with the authentication options. User can sign up to mailing lists. Hero section has a CTA leading customers to the products section where they can make a purchase. Nav bar and footer are visible here. They expand as shown below.
+
 ![Screenshot 2022-12-10 at 11 49 49](https://user-images.githubusercontent.com/98256205/206857077-cda9b66e-63f0-426d-8e0c-1bd53aea7798.png)
 ![Screenshot 2022-12-10 at 11 50 12](https://user-images.githubusercontent.com/98256205/206857084-0f510d6e-928c-43ff-98ad-65e292c6f4ef.png)
 

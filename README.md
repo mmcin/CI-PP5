@@ -256,3 +256,14 @@ HTML files that have been validated with W3.
 - blog.html
 - blog_detail.html
 
+### W3C CSS Validator
+Checked using W3C CSS Validator ensuring there were no errors or warnings present.
+
+### Python Validation
+I used autopep8 to validate all the Python files and checked them with Flake8.
+
+### Color Contrast Accessibility Validator
+The site passed the color contrast test on https://color.a11y.com/ 
+
+### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used for browser extension testing to ensure no errors shown

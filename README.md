@@ -149,4 +149,20 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 ### Contact
 ![ci-pp5 herokuapp com_contact_contact_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853809-2a57c941-45e5-4fdd-8b36-4efb41c870ef.png)
 
+### Profile
+![ci-pp5 herokuapp com_profile_ (2)](https://user-images.githubusercontent.com/98256205/206856035-09d3aff1-e754-467f-955e-84ebf83969fd.png)
+
+### Shopping Bag
+![ci-pp5 herokuapp com_bag_](https://user-images.githubusercontent.com/98256205/206856055-97830d4a-75f7-4373-aa4f-c57e08041721.png)
+
+### Checkout
+![ci-pp5 herokuapp com_checkout_ (1)](https://user-images.githubusercontent.com/98256205/206856083-135d4a2d-5fca-4f1f-9039-192342b1f015.png)
+
+### Checkout Success
+![ci-pp5 herokuapp com_checkout_checkout_success_74DC5ECABEFF4FD4875D304CDCD1524C (2)](https://user-images.githubusercontent.com/98256205/206856149-d5203b26-d190-46cf-881e-6c649c04ca78.png)
+
+### Product Management
+![ci-pp5 herokuapp com_products_add_](https://user-images.githubusercontent.com/98256205/206856248-5e5ee1b7-46c7-4fe5-8a6d-c3a0eb076878.png)
+
+
 

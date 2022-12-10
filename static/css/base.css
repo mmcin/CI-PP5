@@ -453,3 +453,7 @@ input[name='q']::placeholder {
 #mc_embed_signup .asterisk {
     color: #A9040D;
 }
+
+.hidden {
+    display: none;
+}

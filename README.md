@@ -235,3 +235,6 @@ Mailchimp is used to gain new customers and retain existing. Mailchimp enables t
 * [Wordtracker](https://www.wordtracker.com/)
 * [a11y](https://color.a11y.com/) Color Contrast Accessibility Validator.
 
+## Testing
+### Lighthouse
+

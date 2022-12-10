@@ -122,3 +122,11 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 ## Navigation
 ### Entity Relationship Diagram
 ![Screenshot 2022-12-10 at 11 10 41](https://user-images.githubusercontent.com/98256205/206852111-947e1048-e394-4f02-8b58-d0a4f0001135.png)
+
+## Colour Pallete
+![Screenshot 2022-12-10 at 11 29 51](https://user-images.githubusercontent.com/98256205/206852795-8a2f332c-ef21-4043-9d06-005a7b4609fa.png)
+
+## Typography
+## Features
+### Existing Features
+

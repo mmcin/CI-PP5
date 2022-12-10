@@ -144,7 +144,7 @@ Here the products are listed. Out of stock items are marked as such. Clicking th
 ![ci-pp5 herokuapp com_products_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853757-6500ef9f-2f67-4235-ae29-8877e2eac7c6.png)
 
 ### Product Detail
-Here there are details on a product. Reviews are displayed if applicable. Super users can edit or delete a product. Logged in users can review a product. If the admin approves the review it will be displayed. I had hoped to add the logic to the program that checked if the user had bought a product in the past but it proved beyond the scope of the timeframe.  
+Here there are details on a product. Reviews are displayed if applicable. Super users can edit or delete a product. Logged in users can review a product. If the admin approves the review it will be displayed. I had hoped to add the logic to the program that checked if the user had bought a product in the past but it proved beyond the scope of the timeframe. I have used Javascript to make sure that the buttons don't let you add more items than are in stock. The issue with this is that if you reload the page, you can add them again. Products are not removed from the inventory until sold. I'd like to add some logic to reserve products in future but this was the most appropriate solution at the moment.
 ![ci-pp5 herokuapp com_products_3_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853770-9f0232e8-ace0-4487-9ae0-7b3b1a609f1c.png)
 
 ### Blog

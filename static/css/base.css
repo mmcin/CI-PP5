@@ -451,5 +451,5 @@ input[name='q']::placeholder {
 
 /* mailchimp asterisk */
 #mc_embed_signup .asterisk {
-    color: red;
+    color: #A9040D;
 }

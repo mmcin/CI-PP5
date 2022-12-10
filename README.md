@@ -206,4 +206,32 @@ A blog post was created so that the website can create and distribute content ma
 A Facebook business page was set up with the aim of generating growth organically by building a community and encouraging loyalty amongst our target market. The advantage of this is its free and quick to set up and Facebook has a large audience and demographic. The site can connect with customers directly via the Facebook platform and wider global audience. The main aim of the Facebook page is to build and maintain relationship with target audience. Content created can be spread across different social media platforms.
 ![www facebook com_profile php_id=100088602249685](https://user-images.githubusercontent.com/98256205/206858801-e9ecb782-4afc-407f-873e-d3f619dcd4bd.png)
 
+### Email Marketing
+Mailchimp is used to gain new customers and retain existing. Mailchimp enables the business to run and analyse the success of newsletter marketing campaigns. Users who register to receive the newsletter are automatically added to weekly newsletter. This strategy was chosen because its free to set up with the current level of business and can scale quickly as the business grows therefore increase conversions and generate more revenue for the business. The users who sign up have already visited the website and are more likely to become customers and therefore low cost to generate sales.
+
+### Frameworks, Libraries & Programs Used
+* [Amazon S3](https://aws.amazon.com/s3/) service offered by Amazon Web Services that provides object storage through a web service interface.
+* [amiresponsive](http://ami.responsivedesign.is/) to see how responsive the site is on different devices.
+* [Balsamiq](https://balsamiq.com/) was used to create the Wireframes.
+* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) v4.6 was used to help build responsive, mobile-first design.
+* [Color-hex](https://www.color-hex.com/) once I identified the colors I wanted I used color-hex to generate the palette.
+* [Django](https://www.djangoproject.com/) free and open-source, Python-based web framework that follows the model–template–views architectural pattern.
+* [Font Awesome](https://fontawesome.com/) was used for icons for aesthetic and UX purposes on the buttons.
+* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+* [GitHub](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
+* [Gitpod](https://www.gitpod.io/) An online IDE linked to the GitHub repository used to write my code.
+* [Google Chrome Dev tools](https://developer.chrome.com/docs/devtools/) for debugging.
+* [Google Fonts](https://fonts.google.com/about) for typography.
+* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) used for audits to measure the quality of web pages.
+* [Google Keyword Planner](https://ads.google.com/aw/keywordplanner/home?)
+* [Heroku](https://www.heroku.com/) used to deploy this app, a cloud platform as a service supporting several programming languages.
+* [Pexels](https://www.pexels.com/) Images for this project were sourced from Pexels.
+* [Privacy Policy Generator](https://www.privacypolicygenerator.info/) Free Privacy Policy Generator.
+* [Stripe](https://stripe.com/en-ie) Integrated with Stripe to facilitate online payments.
+* [SQLite](https://www.sqlite.org/index.html) database used in local development was a SQLLite database.
+* [Terms and Conditions Generator](https://www.termsandconditionsgenerator.com/) Free terms and conditions generator.
+* [Unsplash](https://unsplash.com/) Images for this project were sourced from Unsplash.
+* [WAVE](https://wave.webaim.org/extension/) Browser Extension testing.
+* [Wordtracker](https://www.wordtracker.com/)
+* [a11y](https://color.a11y.com/) Color Contrast Accessibility Validator.
 

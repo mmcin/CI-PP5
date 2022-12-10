@@ -131,4 +131,22 @@ The site uses "Montserrat" and "Lato" from Google Fonts.
 
 ## Features
 ### Existing Features
+### Homepage
+![ci-pp5 herokuapp com_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853704-e39eb2f8-cde2-40c7-b3a1-27873a1c93e3.png)
+
+### Products
+![ci-pp5 herokuapp com_products_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853757-6500ef9f-2f67-4235-ae29-8877e2eac7c6.png)
+
+### Product Detail
+![ci-pp5 herokuapp com_products_3_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853770-9f0232e8-ace0-4487-9ae0-7b3b1a609f1c.png)
+
+### Blog
+![ci-pp5 herokuapp com_blog_posts_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853783-b293822a-9bb4-433b-946c-4823caa9ab56.png)
+
+### Blog Detail
+![ci-pp5 herokuapp com_blog_post_ice-can-be-nice_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853791-34204f42-8671-4be3-83e1-77fb73b50de7.png)
+
+### Contact
+![ci-pp5 herokuapp com_contact_contact_(Martinas Monitor)](https://user-images.githubusercontent.com/98256205/206853809-2a57c941-45e5-4fdd-8b36-4efb41c870ef.png)
+
 

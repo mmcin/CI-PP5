@@ -454,6 +454,14 @@ input[name='q']::placeholder {
     color: #A9040D;
 }
 
-.hidden {
-    display: none;
+/* hides form labels in 1 pixel so screen readers can still see them*/
+.hidden-label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

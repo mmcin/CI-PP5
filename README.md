@@ -194,5 +194,13 @@ Admin can add a product.
 ### Forgot Password
 ![ci-pp5 herokuapp com_accounts_password_reset_](https://user-images.githubusercontent.com/98256205/206856529-ea9c1163-7d25-400c-a8c0-1b19c4535ae2.png)
 
+## Web Marketing / Marketing Strategies
+### SEO
+Google keyword research was used to optimise web pages and content to increase ranking in search engines. Both short-tail & Long-tail keywords are used. The “People also ask” and “Related searches” was also used to identify keywords used.
+![Screenshot 2022-12-10 at 13 28 39](https://user-images.githubusercontent.com/98256205/206857619-ef5ae51d-4a56-4ec1-b005-2ab4523d2a00.png)
 
+### Content Marketing
+A blog post was created so that the website can create and distribute content material to attract and convert audience into first time customers and repeat customers. The main aim of the blog posts is to build trust and loyalty.
 
+### Social Media Marketing
+A Facebook business page was set up with the aim of generating growth organically by building a community and encouraging loyalty amongst our target market. The advantage of this is its free and quick to set up and Facebook has a large audience and demographic. The site can connect with customers directly via the Facebook platform and wider global audience. The main aim of the Facebook page is to build and maintain relationship with target audience. Content created can be spread across different social media platforms.

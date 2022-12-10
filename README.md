@@ -98,16 +98,23 @@ You can view the kanban board [here](https://github.com/users/martin-mcinerney/p
 
 ## Design
 ### Wireframes
+### Mobile Nav
 ![Screenshot 2022-12-10 at 10 23 21](https://user-images.githubusercontent.com/98256205/206850201-875cbf80-bbca-4dc2-b958-6806b730127a.png)
 
+### Homepage
 ![Screenshot 2022-12-10 at 09 13 54](https://user-images.githubusercontent.com/98256205/206850250-45bd165e-c759-4905-9212-41279aed2a3a.png)
 
+### Products
 ![Screenshot 2022-12-10 at 09 20 32](https://user-images.githubusercontent.com/98256205/206850268-a39c1ca5-de20-424b-bc0a-d47db92a9ee4.png)
 
+### Product Detail
 ![Screenshot 2022-12-10 at 09 28 32](https://user-images.githubusercontent.com/98256205/206850281-4f6c0d1b-e564-4dc2-8c54-c7361d8aa03a.png)
 
+### Blog
 ![Screenshot 2022-12-10 at 09 30 29](https://user-images.githubusercontent.com/98256205/206850301-3e10d07d-52f5-4bb8-9e27-12619c8a5e29.png)
 
+### Blog Detail
 ![Screenshot 2022-12-10 at 09 31 25](https://user-images.githubusercontent.com/98256205/206850320-7b55c610-e04f-4338-9843-4a4e0a12af34.png)
 
+### Contact
 ![Screenshot 2022-12-10 at 09 41 54](https://user-images.githubusercontent.com/98256205/206850342-ca54fed6-6cf8-42c7-bfa1-866554ef5478.png)

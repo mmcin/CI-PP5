@@ -4,7 +4,6 @@ from django.contrib import messages
 
 
 # Create your views here.
-@login_required
 def message(request):
     """Saves contact form input to db"""
     form = MessageForm()

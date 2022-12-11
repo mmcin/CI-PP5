@@ -1,5 +1,3 @@
-***Readme Under Construction***
-
 # Exclusive Whitening
 ## Live Website
 The live website can be viewed [here](https://ci-pp5.herokuapp.com/).
@@ -307,3 +305,207 @@ The WAVE WebAIM web accessibility evaluation tool was used for browser extension
 | Footer | social media links | Clicking on the social media icons in the footer open the link in a new tab |  Pass |
 | Footer | Privacy Policy links | Clicking on the Privacy Policy link in the footer diverts user to the /privacy/ page |  Pass |
 
+### Responsiveness Browser Compatibility
+
+|  | Chrome | Firefox | Edge | Safari | Pass/Fail |
+| ------------- |-------------| -----|  ---------- |  -----| :----: |
+| Expected Appearance   | yes | yes  | yes  | yes | Pass |
+| Expected Layout   | yes | yes  | yes  | yes | Pass |
+
+## Bugs / Errors encountered during development
+* “can’t open file ‘manage.py’: [Error 2] No such file or directory”. Reason why was there is a character missing character in the command used for starting the project
+*  I tried using Whitenoise to host staticfiles for a while after getting scared for my money due to AWS budget notices. I would get Django errors because I was stashing my media files in the static directory. This meant that I had the filing system set up weird and didn't have working file service in production with debug to true. This lead me to miss the error log that was leading me on a wild goose chase when trying to use Stripe webhooks to trigger a confirmation email. (see below)
+*  I couldn't get the payment intent succeeded webhook to work. I dragged the http response to the top of the handler fucntion and it was working fine so it was begin sent alright. I couldn't see the error as debug was on false due to the above issue. In the end it was due to missing email template files that I had forgotten to write.
+*  Product detail quantity buttons were allowing users to add more than the allowed items in stock. This would be very bad for a business so I implemented some custom JS that would disable the button when the stock level had been reached. 
+*  Customers could add 10 items if there were ten in stock but then they could reload the page and add another 10. To protect against this I decided to add some code that would automatically redice the bag quantity of a product to the number left in stock if they had more than was available in their bag. A message was added for this.
+*  In order to solve the above bug I had to display the stock quantity of products and add an out of stock message.
+
+## Stripe
+* Register for an account at stripe.com
+* Go to Developers section once logged in
+* Go to API keys section
+* Note both the publishable and secret keys
+* In your local environment(env.py) and Heroku, create environment variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY with the publishable and secret key values
+os.environ.setdefault('STRIPE_PUBLIC_KEY', 'YOUR_VALUE_GOES_HERE')
+os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')
+* Back in the Developers section of your stripe account click on Webhooks
+* Create a webhook with the url of your website /checkout/wh/, for example:
+* Select the payment_intent.payment_failed and payment_intent.succeeded as events to send
+* Note the key created for this webhook
+* In your local environment(env.py) and Heroku, create environment variable STRIPE_WH_SECRET with the secret values os.environ.setdefault('STRIPE_WH_SECRET', 'YOUR_VALUE_GOES_HERE')
+* Test the webhook and note the success/fail attempts for troubleshooting, see events and logs for further testing.
+
+## Amazon WebServices
+* Create an account at aws.amazon.com
+* Open the S3 application and create an S3 bucket named "ci-pp5
+* Select AWS Region.
+* Uncheck the "Block All Public access setting" & acknowledge that the bucket will be public, it will need to be public in order to allow public access to static files.
+* In the Properties section, navigate to the "Static Website Hosting" section and click edit
+* Under the Properties section, turn on "Static Website Hosting", and set the index.html and the error.html values.
+* In the Permissions section, click edit on the CORS configuration and set the below configuration
+* Click to edit the bucket policy and generate and set the below configuration:
+* Bucket policy
+* Go to the Access Control List and set the List objects permission for everyone under the Public Access section.
+* Open the IAM application to control access to the bucket and set up a user group called
+* Click on Policies, and Create Policy.
+* Click on the JSON tab and import a pre-built Amazon policy called AmazonS3FullAccess:
+* Set the following settings in the JSON tab:
+* Click Review Policy, give it a name and description and click Create Policy.
+* To attach the policy to the group, navigate to Groups, then Permissions, and under Add Permissions, select Attach Policy.
+* To create a user for the group, click Add User, and create one
+* Add the user to the group created, making sure to download the CSV file which contains the user's access credentials.
+* Note the following AWS code in Settings.py. An environment variable called USE_AWS must be set to use these settings, otherwise it will use local storage:
+* 
+## Google Email
+* Create an email account at google.com, login, go to accounts settings in your gmail account and then click on Other Google Account Settings
+* Go to accounts and import then click on other account settings
+* Under signing into Google, turn on 2-step verification and follow the steps to enable
+* Once verified click on app passwords, select Other as the app and give the password a name, for example Django
+* Click create and a 16 digit password will be generated, copy this 16 digit password
+* In the env.py file, create an environment variable called EMAIL_HOST_PASS with the 16 digit password
+* In the env.py file, create an environment variable called EMAIL_HOST_USER with the email address of the gmail account
+* Set and confirm the following values in the settings.py file to successfully send emails
+* You will also need to set the variables EMAIL_HOST_PASS and EMAIL_HOST_USER in your production instance, for example Heroku
+
+## Deployment
+
+* This project was developed using a GitPod workspace. The code was committed to Git and pushed to GitHub using the terminal.
+
+* Log in to [Heroku](https://id.heroku.com/login) or create an account
+* On the main page click New and Create New App
+* Note: new app name must be unique
+* Next select your region, I chose Europe.
+* Click Create App button
+* Click in resources and select Heroku Postgres database
+* Click Reveal Config Vars and add new config "SECRET_KEY"
+* Click Reveal Config Vars and add new config "DISABLE_COLLECTSTATIC = 1"
+* The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+* Next, go to Buildpack section click Add Buildpack select python and Save Changes
+* Scroll to the top of the page and choose the Deploy tab
+* Select Github as the deployment method
+* Confirm you want to connect to GitHub
+* Search for the repository name and click the connect button
+* Scroll to the bottom of the deploy page and select the preferred deployment type
+* Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+* As Heroku Student Pack no longer includes free access to the Postgres add-on I had to migrate Postgres databases from Heroku to keep ElephantSQL.
+* Navigate to ElephantSQL.com and click “Get a managed database today”
+* Select “Try now for FREE” in the TINY TURTLE database plan
+* Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account
+* In the Create new team form
+
+### Migrating databases
+* Create a database
+* Log in to ElephantSQL.com to access your dashboard
+* Click “Create New Instance”
+* Set up your plan
+* Select “Select Region” EXAMPLE "EU-West-1 (Ireland)"
+* Then click “Review”
+* Check your details are correct and then click “Create instance”
+* Return to the ElephantSQL dashboard and click on the database instance name for this project
+
+### Migrating your data
+* Navigate to the Postgres Migration Tool repo on github in a new browser tab
+* Click the Gitpod button to open a new workspace
+* Run the script " python3 reel2reel.py" command in the terminal
+* In a different browser tab, go to your app in Heroku and select the Settings tab
+* Click the “Reveal Config Vars” button
+* Copy the value in the DATABASE_URL Config Var. It will start with postgres://
+* Return to Gitpod and paste in the URL you just copied into the terminal where prompted to provide your DATABASE_URL and click enter
+* In your original browser tab, get your ElephantSQL database URL. Again, it will start with postgres://
+* Return to Gitpod and paste in the URL where prompted
+* The data will now be downloaded from Heroku and uploaded to your ElephantSQL database
+* To test that your database has been moved successfully, return to ElephantSQL and select BROWSER
+* Click the “Table queries” button. If you see any options in the dropdown, your tables have been created
+* Select a table name you recognise, and then click “Execute”
+* You should see your data displayed relating to the table you selected
+
+### Connecting ElephantSQL database to Heroku
+* In the Heroku Dashboard for your project, open the Resources tab
+* In the Resources tab, remove the existing Postgres add-on:
+* Confirm by typing in the name of your Heroku app when prompted.
+* Navigate to the Settings tab
+* Reveal your existing Config Vars. The original DATABASE_URL should have been deleted when the add-on was removed.
+* Add a new config var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
+* Check the Activity tab to confirm
+
+
+### Final Deployment 
+
+* Create a runtime.txt `python-3.8.14`
+* Create a Procfile 
+* When development is complete change the debug setting to: `DEBUG = False` in settings.py
+* In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+
+### Forking This Project
+
+* Open [GitHub](https://github.com/martin-mcinerney/ci-pp5)
+* Find the 'Fork' button at the top right of the page
+* Once you click the button the fork will be in your repository
+
+### Cloning This Project / Local Deployment
+
+* Clone this project by following the steps:
+
+* Open [GitHub](https://github.com/martin-mcinerney/ci-pp5)
+* You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order
+to copy the URL
+* Once you click the button the fork will be in your repository
+* Open a new terminal
+* Change the current working directory to the location that you want the cloned directory
+* Type 'git clone' and paste the URL copied in step 3
+
+```git clone https://github.com/martin-mcinerney/ci-pp5```
+
+* Press 'Enter' and the project is cloned to your workspace
+* Create an env.py file(do not commit this file to source control) in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
+<br><code>import os</code>
+<br><code>os.environ["SECRET_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_PUBLIC_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_SECRET_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_WH_SECRET"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["AWS_ACCESS_KEY_ID"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["AWS_SECRET_ACCESS_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["EMAIL_HOST_USER"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["EMAIL_HOST_PASS"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["USE_AWS"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["DATABASE_URL"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["DEVELOPMENT"] ='True'</code>
+
+* Some values for the environment variables above are described in different sections of this readme
+* Install the relevant packages as per the requirements.txt file
+* In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqllite database
+* Ensure debug is set to true in the settings.py file for local development
+* Add localhost/127.0.0.1 to the ALLOWED_HOSTS variable in settings.py
+* Run "python3 manage.py showmigrations" to check the status of the migrations
+* Run "python3 manage.py migrate" to migrate the database
+* Run "python3 manage.py createsuperuser" to create a super/admin user
+* Run manage.py loaddata db.json to load the product data into the database
+* Start the application by running <code>python3 manage.py runserver</code>
+* Open the application in a web browser, for example: http://127.0.0.1:8000/
+
+## Credits
+
+* Code Institute - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) -  Walkthrough
+* Code Institute - [Hello Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) -  Walkthrough
+* Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/
+) - Django blog project Walkthrough
+* Hillbox - My Code Intitute PP4
+* Style Django Forms With Bootstrap 
+ [YouTube](https://www.youtube.com/watch?v=6-XXvUENY_8)
+* More Django Styling  
+ [YouTube](https://www.youtube.com/watch?v=uJp4PaDkux0)
+* Richard Sherry - I found the answers to many of my questions about the PP5 by reading Richard's readme and code.
+* The great Bootstrap and Django docs
+* Pexel for the images
+ 
+
+## Acknowledgements
+* To create this website, I relied on material covered in the Full Stack Development course by Code Institute.
+* I also sourced information and help from a variety of sources such as Slack Community Channels, Udemy, W3Schools, MDN and YouTube for Online Web Tutorials and resources.
+* Martina Terlevic for being a great mentor and helping me to undertstand how to build a more robust application.
+* Michael Mc for testing the site.
+* Viv for feeding me during my long days and nights stuck at the keyboard.
+
+This project is for educational use only and was created for the Code Institute Module.
+
+Martin McInerney

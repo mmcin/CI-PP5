@@ -267,3 +267,43 @@ The site passed the color contrast test on https://color.a11y.com/
 
 ### Accessibility
 The WAVE WebAIM web accessibility evaluation tool was used for browser extension testing to ensure no errors shown
+
+### Manual Testing
+### More manual testing scenarios and results
+| Feature | Test  | Expected Result | Actual Result |
+| -------------| ----- | ----- | :----: |
+| XY logo  | Selecting XY logo on homepage |  directs user back to homepage |  Pass |
+| Navigation Links  | Selecting navigation links |  directs user to relevant categories & pages |  Pass |
+| All categories  | Selecting All for each category |  directs user to show all relevant categories on the same page |  Pass |
+| Sort By  | Selecting the filter Sort by for each category |  successfully alters the search By price, name and category options reflects results accordingly on page |  Pass |
+| Contact Us | Selecting Contact Us |  directs user to Contact Us page |  Pass |
+| Shop Now | Selecting Shop Now |  directs user to full products list page |  Pass |
+| Blog | Selecting Blog |  directs user to Blog page |  Pass |
+| Blog Detail | Selecting Blog Detail |  directs user to Blog Detail page |  Pass |
+| Submitting Review Form | Editing details in review form on Products |  successfully edits message to admin and displays success message |  Pass |
+| Submitting Edit Review Form | Submitting  details in review form on Products |  successfully sends message to admin and displays success message |  Pass |
+| User Access | Logged in as user |  I can leave a review comment on products |  Pass |
+| User Access | Logged in as user and author |  I can edit a review comment on products |  Pass |
+| User Access | Logged in as user and author |  I can delete a review comment on products |  Pass |
+| Form Validation Required fields | Filling in form on /contact page | requires name, email and body and contact reason selected to send to Django admin  |  Pass |
+| Contact form submission | submit contact form | successfully sends data to Django admin as expected  |  Pass |
+| Register | Register for an account | selecting Register in my account directs user to /accounts/signup/ page |  Pass |
+| Login | Login to an account | selecting Login in my account directs user to /accounts/Login/ page |  Pass |
+| Search | Using the search box | Entering a search returns expected result  |  Pass |
+| Back to top | Back to top box | Selecting the back to top box on the products pages brings the user back to the top of the page  |  Pass |
+| Search no results | No search | Entering a no results search returns error message and shows all products  |  Pass |
+| New User | Registering as a new user | Registering as a new user entering form validation works |  Pass |
+| Admin | Loggin in as Logging in as superuser / admin | Logging in as superuser / admin directs user to admin access, shows product management page |  Pass |
+| Login Message | log-in Success | "successfully signed in as (user name)" message shown to user|  Pass |
+| Add Product | Adding a new product | Adding a new product on the product management page successfully adds product |  Pass |
+| Add Product | no image is selected | default image is used |  Pass |
+| Deleting Product | Deleting selected product | removed product from search |  Pass |
+| Deleting Message | Deleting product confirmation | Confirmation message of deletion is shown when successfully deleted |  Pass |
+| Deleting Message | Deleting product confirmation | Confirmation message of deletion is shown when successfully deleted |  Pass |
+| Defensive Programming | Test for SQL Injection attacks | Users not permitted to access create/update/delete products articles or reviews if they don't have access permission | Pass |
+| Logging out | message shown | Logging out as a user / admin prompts "are you sure" message |  Pass |
+| Successfully signed out | signed out message shown | "You have signed out" message shows to user when successfully signed out |  Pass |
+| Logging out | Logging out and redirect | Logging out as a user / admin directs user to homepage |  Pass |
+| Footer | social media links | Clicking on the social media icons in the footer open the link in a new tab |  Pass |
+| Footer | Privacy Policy links | Clicking on the Privacy Policy link in the footer diverts user to the /privacy/ page |  Pass |
+

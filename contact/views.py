@@ -4,10 +4,12 @@ from django.contrib import messages
 
 
 # Create your views here.
+
 def message(request):
     """Saves contact form input to db"""
     form = MessageForm()
-    if request.method == 'POST':
+    if request.method == 'POST' and request.user.is_authenticated:
+
         form = MessageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
